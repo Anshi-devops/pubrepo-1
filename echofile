@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('gitinstall') {
+            steps {
+                sh 'sudo yum install git -y' 
+            }
+        }
+        stage('echo') {
+            steps {
+                echo "my name is anshi" 
+            }
+        }
+        
+    }
+}
